@@ -1,30 +1,13 @@
- #UC2 Ability to create employee payroll table
+ 
+
+mysql> #UC3 Ability to create employee payroll data in payroll service database as part of CRUD operation
 
 
 
+MySQL  localhost:3306 ssl  employee_payroll  SQL > INSERT INTO employee_payroll (name, salary, start) VALUES
+                                                 -> ('Shashank', 3000000.00, '2022-01-01'),
+                                                 -> ('Neeraj', 2500000.00, '2022-01-05'),
+                                                 -> ('Tina', 2500000.00, '2022-01-05');
+Query OK, 3 rows affected (0.0118 sec)
 
-MySQL  localhost:3306 ssl  SQL > use employee_payroll
-Default schema set to `employee_payroll`.
-Fetching global names, object names from `employee_payroll` for auto-completion... Press ^C to stop.
- MySQL  localhost:3306 ssl  SQL > create table employee_payroll
-                               -> (
-                               -> id INT unsigned NOT NULL AUTO_INCREMENT,
-                               -> name VARCHAR(150) NOT NULL,
-                               -> salary double NOT NULL,
-                               -> start DATE NOT NULL,
-                               -> PRIMARY KEY (id));
-Query OK, 0 rows affected (1.6634 sec)
- MySQL  localhost:3306 ssl  SQL > select * from employee_payroll
-                               -> ;
-Empty set (0.0057 sec)            describe employee_payroll
-                               -> describe employee_payroll
-                               -> ;
-+--------+--------------+------+-----+---------+----------------+
-| Field  | Type         | Null | Key | Default | Extra          |
-+--------+--------------+------+-----+---------+----------------+
-| id     | int unsigned | NO   | PRI | NULL    | auto_increment |
-| name   | varchar(150) | NO   |     | NULL    |                |
-| salary | double       | NO   |     | NULL    |                |
-| start  | date         | NO   |     | NULL    |                |
-+--------+--------------+------+-----+---------+----------------+
-4 rows in set (0.0031 sec)
+Records: 3  Duplicates: 0  Warnings: 0
