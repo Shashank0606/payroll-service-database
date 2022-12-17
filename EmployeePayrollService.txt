@@ -1,0 +1,16 @@
+#UC1 Ability to create a payroll service database
+
+
+create database payroll_services;
+use payroll_services;
+select database();
+
+
+
+
+
+#	Time	Action	Message	Duration / Fetch
+3	1	08:14:40	create database payroll_services	1 row(s) affected	0.047 sec
+3	2	08:15:39	use payroll_services	0 row(s) affected	0.016 sec
+3	3	08:15:42	select database()
+ LIMIT 0, 1000	1 row(s) returned	0.000 sec / 0.000 sec
